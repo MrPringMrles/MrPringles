@@ -76,19 +76,28 @@
 								<form method="post" action="/assets/php/takeform.php">
 									<div class="field half first">
 										<label for="name">Name</label>
-										<input type="text" name="realname" id="name" />
+										<input
+										name="realname"
+										size="64"
+										maxlength="64"/>
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<input
+										name="email"
+										size="64"
+										maxlength="64"/>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="body" id="message" rows="4"></textarea>
+										<textarea
+										name="body"
+										rows="4"
+										cols="60">
+										</textarea>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<input type="submit" name="send" value="Send Your Message"/>
 									</ul>
 								</form>
 								<ul class="icons">
