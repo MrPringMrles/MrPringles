@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Thanks For Contacting Us</title>
+<title>Thanks For Contacting Me</title>
 </head>
 <body>
 <?php
@@ -8,7 +8,6 @@
   $recipient = 'greensparkles808@gmail.com';
   $email = $_POST['email'];
   $realName = $_POST['realname'];
-  $subject = $_POST['subject'];
   $body = $_POST['body'];
   $messages = array();
 # Fake email filter chars
