@@ -20,12 +20,6 @@ $messages[] = "The real name field must contain only " .
 "alphabetical characters, numbers, spaces, and " .
 "reasonable punctuation. We apologize for any inconvenience.";
 }
-# Line break check
-$subject = preg_replace('/\s+/', ' ', $subject);
-# Blank sub check
-if (preg_match('/^\s*$/', $subject)) {
-$messages[] = "Please specify a subject for your message.";
-}
 
 $body = $_POST['body'];
 # Make sure the message has a body
@@ -44,7 +38,6 @@ $messages[] = "Your message was blank. Did you mean to say " .
   } else {
     # Send the email - we're done
 mail($recipient,
-      $subject,
       $body,
       "From: $realName <$email>\r\n" .
       "Reply-To: $realName <$email>\r\n"); 
